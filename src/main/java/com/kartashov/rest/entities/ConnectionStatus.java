@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class ConnectionStatus {
 
-    enum Status {
+    public enum Status {
         Connected,
         Disconnected,
         Unknown
@@ -27,6 +27,10 @@ public class ConnectionStatus {
     @JsonProperty
     public Status getStatus() {
         return status;
+    }
+
+    public String toString() {
+        return String.format("{ status: %s }", status);
     }
 
     @javax.persistence.Converter

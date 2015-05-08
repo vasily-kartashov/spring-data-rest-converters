@@ -28,4 +28,8 @@ public class Unit {
     public void setConnectionStatus(ConnectionStatus connectionStatus) {
         this.connectionStatus = connectionStatus;
     }
+
+    public String toString() {
+        return String.format("{ id: %d, connectionStatus: %s }", id, connectionStatus);
+    }
 }
